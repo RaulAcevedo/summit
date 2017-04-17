@@ -1,0 +1,1616 @@
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../font/FredokaOne-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../font/FredokaOne-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/FredokaOne-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../font/FredokaOne-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/FredokaOne-Regular.ttf#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+  font-family: 'Trebuchet MS', Helvetica,Arial,Sans-serif;
+  background-color: #FFF;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button:active {
+    outline: none;
+    border: none;
+}
+
+button:focus {
+  outline:0;
+}
+
+.main_app, .detail_screen{
+  padding-top: 15px;
+}
+
+
+
+
+.mobile-safari-fix {
+  overflow-y: scroll;
+  overflow-x: scroll; 
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+.loading img{
+  display: block;
+margin: auto;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+}
+
+.loadingMessage{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  text-align: center;
+  color: #333;
+}
+
+.detail_image{
+  width: 100%;
+  max-width:100%;
+  float:left;
+  border-bottom:1px solid silver;
+  background-color: #EEE;
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+    color:#575353;
+    font-size: 1.2em;
+    -webkit-margin-before: 1.2em;
+    -webkit-margin-after: 1.2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.app_header h2{
+  color:#EEE;
+}
+
+#descripcion,#instrucciones,#precauciones,#auxilios,#medioAmbiente,#recomendaciones,#preventivo,#curativo,.tap_description {
+clear:both;
+display:none;
+line-height:1.5em;
+text-align:justify;
+padding:20px;
+}
+
+#descripcion .idea,#instrucciones .idea,#precauciones .idea,#auxilios .idea,#medioAmbiente .idea,#recomendaciones .idea,#preventivo .idea,#curativo .idea {
+background:#f3f3f3;
+border-left:5px solid #cecece;
+padding:5px 5px 5px 10px;
+}
+
+.accionBactericida img {
+display:block;
+width:70%;
+margin:auto;
+}
+
+.buscar {
+    width:100%;
+    height: 100%;
+}
+
+.buscar input {
+background:#3b8d25;
+border:0;
+border-bottom:1px solid #fff;
+color:#FFF;
+height:24px;
+font-size:16px;
+vertical-align:middle;
+width:96%;
+margin:10px auto;
+padding:10px 0 0;
+}
+
+.buscar .icon {
+width:16px;
+position:relative;
+float:right;
+right:70px;
+padding:13px 20px 13px 24px;
+}
+
+.buscar .icon-cross {
+color:#aaa;
+padding-left:28px;
+width:16px;
+}
+
+.cabecera {
+background:#3b8d25;
+height:50px;
+position:absolute;
+width:100%;
+}
+
+.cabecera .icon-arrow-left2 {
+color:#fff;
+float:left;
+width:18px;
+margin:0;
+padding:12px 20px;
+}
+
+.descripcion,.instrucciones,.precauciones,.auxilios,.medioAmbiente,.tap_button {
+border-bottom:1px solid silver;
+background-color: #EEE;
+float:left;
+height:auto;
+width:100%;
+cursor:pointer;
+}
+
+.tap_button:hover{
+  background-color: #CCC;
+}
+
+.tap_button.openItem{
+  border-bottom:none;
+  background-color: #FFF;
+}
+
+.tap_description.openItem{
+  border-bottom:1px solid silver;
+  background-color: #FFF;
+}
+
+
+.enfermedad h2 {
+background:#30a844;
+color:#fff;
+margin: 0px;
+text-align:center;
+padding:.3em 0;
+}
+
+.enfermedad .agente {
+  border-bottom:1px solid silver;
+  display:block;
+  position:relative;
+  background:#DCDCDC;
+  padding:.5em 0;
+  text-align: center;
+}
+
+.enfermedad .agente h4 {
+display:block;
+font-size:20px;
+font-style:italic;
+color:#403F3F;
+margin:.5em 1em;
+}
+
+.enfermedad #imagenes,.enfermedad #descripcion,.enfermedad #recomendaciones,.enfermedad #preventivo,.enfermedad #curativo {
+clear:both;
+display:none;
+}
+
+.enfermedad #imagenes {
+background:#dcdee3;
+margin-top:30px;
+padding:10px 0;
+}
+
+.enfermedad #imagenes div {
+background:#fff;
+max-width:450px;
+margin:10px auto 5px;
+padding:20px 10px;
+}
+
+.enfermedad #imagenes div img {
+display:block;
+width:100%;
+margin:auto;
+}
+
+.enfermedad #imagenes div div {
+background:#fff;
+text-align:center;
+width:100%;
+margin:0 auto;
+padding:0;
+}
+
+.enfermedad .imagenes,.enfermedad .descripcion,.enfermedad .recomendaciones,.enfermedad .preventivo,.enfermedad .curativo {
+border-bottom:1px solid silver;
+display:block;
+float:left;
+height:auto;
+width:100%;
+}
+
+.enfermedades .filtro {
+position:relative;
+text-align:center;
+width:100%;
+margin:1em 0;
+}
+
+.enfermedades .filtro select {
+background:#fff;
+border:1px solid green;
+text-decoration:none;
+padding:.5em .3em;
+}
+
+
+.enlaces div{
+  display: inline-block;
+  margin-top: 10px;
+}
+
+
+
+.horizontal {
+  right: auto;
+  left: -50px;
+  bottom: 65%;
+}
+
+.horizontal .enlace_manual {
+}
+
+.horizontal .enlace_producto {
+}
+
+.horizontal .enlace_enfermedad {
+
+}
+
+.vertical .enlace_manual {
+
+}
+
+.vertical .enlace_producto {
+
+}
+
+.vertical .enlace_enfermedad {
+
+}
+
+.generalidad {
+line-height:1.4em;
+position:relative;
+text-align:left;
+padding: 0px 15px;
+}
+
+.generalidad h2 {
+text-align:left;
+line-height:1.1em;
+}
+
+.generalidad .imgBacterias,.generalidad .micro {
+text-align:center;
+width:80%;
+margin:0 auto;
+}
+
+.generalidad .imgBacterias img,.generalidad .micro img {
+-webkit-border-radius:2em;
+border-radius:2em;
+width:80%;
+}
+
+.generalidad .imgBacterias span,.generalidad .micro span {
+display:block;
+margin-bottom:25px;
+}
+
+.generalidad .luz {
+position:relative;
+width:80%;
+margin:0 auto;
+}
+
+.generalidad .luz div:nth-of-type(1) {
+display:inline-block;
+font-weight:700;
+left:5%;
+position:absolute;
+top:43%;
+width:6.5em;
+-webkit-transform:translateX(-50%) translateY(-50%) rotate(-90deg);
+-moz-transform:translateX(-50%) translateY(-50%) rotate(-90deg);
+-o-transform:translateX(-50%) translateY(-50%) rotate(-90deg);
+-ms-transform:translateX(-50%) translateY(-50%) rotate(-90deg);
+transform:translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.generalidad .luz div:nth-of-type(2) {
+display:inline-block;
+width:80%;
+margin:0 10%;
+}
+
+.generalidad .luz div:nth-of-type(2) img {
+-webkit-border-radius:5%;
+border-radius:5%;
+width:47.5%;
+}
+
+.generalidad .luz div:nth-of-type(2) img:nth-of-type(odd) {
+margin-right:5%;
+}
+
+.generalidad .luz div:nth-of-type(3) {
+display:inline-block;
+font-weight:700;
+left:95%;
+position:absolute;
+top:45%;
+width:6.5em;
+-webkit-transform:translateX(-50%) translateY(-50%) rotate(-270deg);
+-moz-transform:translateX(-50%) translateY(-50%) rotate(-270deg);
+-o-transform:translateX(-50%) translateY(-50%) rotate(-270deg);
+-ms-transform:translateX(-50%) translateY(-50%) rotate(-270deg);
+transform:translateX(-50%) translateY(-50%) rotate(-270deg);
+}
+
+.resultadoEnfermedad li,.listaEnfermedad li,.listaAgente li,.generalidades ul li {
+  border-bottom: 1px solid #c0c0c0;
+  overflow: hidden;
+  padding: 15px 0px;
+  cursor: pointer
+}
+
+.resultadoEnfermedad li:hover,.listaEnfermedad li:hover,.listaAgente li:hover,.generalidades ul li:hover {
+  background-color: rgba(0,0,0,.2);
+}
+
+.resultadoEnfermedad li span,.listaEnfermedad li span,.listaAgente li span,.generalidades ul li span {
+float:left;
+margin-left:5px;
+width:85%;
+}
+
+.resultadoEnfermedad li .icon,.listaEnfermedad li .icon,.listaAgente li .icon,.generalidades ul li .icon {
+color:green;
+float:left;
+height:18px;
+width:10px;
+margin:0px 10px 0;
+}
+
+.resultadoEnfermedad li .icon-warning,.listaEnfermedad li .icon-warning,.listaAgente li .icon-warning,.generalidades ul li .icon-warning {
+color:#f6921e;
+height:24px;
+width:24px;
+}
+
+.laboratorio img {
+-webkit-border-radius:.5em;
+border-radius:.5em;
+}
+
+.laboratorio img:first-of-type {
+display:block;
+width:80%;
+margin:auto;
+}
+
+.laboratorio img:nth-of-type(even) {
+float:left;
+height:10%;
+width:39%;
+margin:0 0 0 10%;
+}
+
+.laboratorio img:nth-of-type(3),.laboratorio img:nth-of-type(5) {
+height:10%;
+width:39%;
+}
+
+.listaAgente{
+  margin:0;
+}
+
+.agentList .icon{
+  margin: 1px 10px 0!important;
+
+}
+.listaAgente li:first {
+border-top: 1px solid #c0c0c0;
+}
+
+.listaAgente li {
+height:25px;
+line-height:25px
+}
+
+.listaAgente li span {
+height:30px;
+}
+
+.icon {
+display:inline-block;
+width:24px;
+height:24px;
+fill:currentColor;
+}
+
+.icon-menu,.icon-arrow-left2,.icon-search,.icon-cross,.icon-up-arrow{
+color:inherit;
+float:left;
+padding:13px 20px;
+}
+
+.icon-menu ~ h2,.icon-arrow-left2 ~ h2 {
+color:inherit;
+display:inline;
+font-size:19px;
+float:left;
+margin:14px 0 0;
+}
+
+.listaCultivo .itemCultivo {
+display:inline-block;
+margin-bottom:30px;
+text-align:center;
+width:48%;
+cursor:pointer;
+border: rgba(0,0,0,0) solid 1px;
+}
+
+.listaCultivo:hover .itemCultivo:hover {
+border: rgba(0,0,0,.2) solid 1px;
+}
+
+.listaCultivo .itemCultivo img {
+height:128px;
+width:128px;
+}
+
+.listaCultivo .itemCultivo span {
+display:block;
+font-size:15px;
+}
+
+
+.mapa {
+margin-bottom:100px;
+}
+
+.mapa .imagenAgente {
+    width:100%;
+    margin:auto;
+}
+
+.mapa .imagenAgente>div {
+    margin-top:2em;
+    width:100%;
+}
+
+.mapa .imagenAgente div div:first-of-type {
+    border-bottom:2px solid #006400;
+    position: absolute;
+    width:50%;
+}
+
+.mapa .imagenAgente div div:last-of-type {
+  width: 30%;
+  padding-top: .2em;
+  margin: 0 0 0 auto;
+}
+
+.mapa .imagenAgente div span {
+text-align: right;
+display: block;
+padding-right: .5em;
+padding-left: 70%;
+}
+
+.mapa .imagenAgente img {
+width:100%;
+}
+
+.loading {
+background:#fff;
+height:100%;
+width:100%;
+}
+
+.loading .icon {
+color:green;
+display:block;
+height:100%;
+-moz-animation:spin .5s infinite linear;
+-webkit-animation:spin .5s infinite linear;
+margin:auto;
+}
+
+.menu {
+background:#eee;
+color:#000;
+height:100%;
+min-width: 250px;
+max-width: 250px;
+-ms-filter:none!important;
+filter:none!important;
+width:80%;
+}
+
+
+.menu ul{
+  height: 95%;
+}
+
+.menu ul li{
+  border-bottom: #999 solid 1px; 
+}
+
+.menu ul li button {
+  width: 100%;
+  text-align: left;
+  overflow:hidden;
+  padding:14px 0;
+  font-size: 1em;
+}
+
+.menu ul li span {
+    margin-left:10px;
+
+}
+
+.menu ul li .icon {
+    color:#3b8d25;
+    height:18px;
+    width:18px;
+    margin:6px 10px -3px 20px;
+    display: inline;
+}
+
+.menu .menuTop {
+background:#3b8d25;
+height:2.5%;
+}
+
+.menuActivo {
+  background-color:#d0d0d0 !important;
+}
+
+.nosotros,.contacto {
+margin-bottom:30px;
+padding:0 30px;
+}
+
+.nosotros h4,.contacto h4 {
+margin-left:10px;
+}
+
+.nosotros img,.contacto img {
+display:block;
+max-width:700px;
+width:100%;
+margin:auto;
+}
+
+.nosotros p,.contacto p {
+text-align:justify;
+}
+
+.nosotros ul li,.contacto ul li {
+margin-right:20px;
+}
+
+.nombreProducto {
+color:#fff;
+font-size:20px;
+padding-top:18px;
+}
+
+.tituloProducto {
+background:#30a844;
+color:#fff;
+font-size:18px;
+font-weight:100;
+text-align:center;
+padding:5px 0;
+}
+
+.productos::after {
+content:'';
+opacity:1;
+-ms-filter:none;
+filter:none;
+top:0;
+left:0;
+bottom:0;
+right:0;
+position:absolute;
+z-index:-1;
+}
+
+
+.sugerencia p,.sugerencia div {
+width:80%;
+margin:auto;
+}
+
+.sugerencia img:last-of-type {
+display:block;
+width:90%;
+margin:20px auto;
+}
+
+table {
+overflow:scroll;
+}
+
+.principal {
+padding-right:20px;
+}
+
+.lightbox {
+  display:none;
+  position:fixed;
+  z-index:999;
+  width:100%;
+  height:100%;
+  text-align:center;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  background:rgba(0,0,0,0.8);
+
+}
+
+.lightbox img{
+  display:block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right: 0;
+  margin: auto;
+}
+
+
+.tabs {
+max-width:100%;
+float:none;
+list-style:none;
+border-bottom:0;
+margin:0 auto;
+padding:0;
+}
+
+.tabs:after {
+content:'';
+display:table;
+clear:both;
+}
+
+.tabs input[type=radio] {
+display:none;
+}
+
+.tabs label {
+display:block;
+float:left;
+width:50%;
+color:#ccc;
+font-size:20px;
+font-weight:400;
+text-decoration:none;
+text-align:center;
+line-height:2;
+cursor:pointer;
+border-bottom:4px solid #ccc;
+-webkit-transition:all .5s;
+-moz-transition:all .5s;
+-o-transition:all .5s;
+-ms-transition:all .5s;
+transition:all .5s;
+}
+
+.tabs label:hover {
+color:green;
+border-bottom:4px solid green;
+}
+
+.tabs [id^="tab"]:checked + label {
+background:#fff;
+border-bottom:4px solid green;
+color:green;
+}
+
+.tab-content {
+display:none;
+width:100%;
+float:left;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+background-color:#fff;
+}
+
+50% {
+-moz-transform:scale(1.01);
+-webkit-transform:scale(1.01);
+opacity:.5;
+-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+filter:alpha(opacity=50);
+}
+
+100% {
+opacity:1;
+-ms-filter:none;
+filter:none;
+-moz-transform:rotate(-360deg);
+-webkit-transform:rotate(-360deg);
+}
+
+.lista_verde ul li {
+border-bottom:1px solid silver;
+overflow:hidden;
+list-style:none;
+padding:18px 0;
+}
+
+.no-line ul li {
+  border: none;
+}
+
+.lista_verde ul li .icon {
+color:green;
+float:left;
+height:18px;
+width:10px;
+margin-right:8px;
+}
+
+.clear {
+clear:both;
+}
+
+.title-seccion {
+background:#30a844;
+margin-bottom:30px;
+color:#FFF!important;
+font-size:20px;
+font-weight:700;
+margin-top:1px;
+padding:.5em 20px;
+}
+
+.formulario {
+width:98%;
+box-sizing:border-box;
+max-width:500px;
+margin:auto;
+padding:20px;
+}
+
+.formulario select {
+width:100%;
+box-sizing:border-box;
+margin:5px 5px 5px 0;
+}
+
+select {
+background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAG1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUUeIgAAAACXRSTlMAzxKHj6p/CwX+Rbu2AAAANUlEQVQI12MgBpQqgEimCAYWIRBD0YCBwVEBKCAM5ACFwAIgIZAAWAgkABYShprAnMBAHAAAJAMDyPNfl7QAAAAASUVORK5CYII=");
+background-color:#3498DB;
+background-repeat:no-repeat;
+background-position:right 10px top 15px;
+background-size:16px 16px;
+width:auto;
+font-size:16px;
+font-weight:700;
+color:#fff;
+text-align:center;
+text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+border-radius:3px;
+-webkit-border-radius:3px;
+-webkit-appearance:none;
+border:0;
+outline:0;
+-webkit-transition:.3s ease all;
+-moz-transition:.3s ease all;
+-ms-transition:.3s ease all;
+-o-transition:.3s ease all;
+transition:.3s ease all;
+padding:12px;
+}
+
+.blue {
+background-color:#3498DB;
+}
+
+.blue:hover {
+background-color:#2980B9;
+}
+
+.gray {
+background-color:#D9D9D9;
+color:#484848;
+text-shadow:0 1px 0 #fff;
+}
+
+.gray:hover {
+background-color:#2ECC71;
+color:#FFF;
+text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+}
+
+.green {
+background-color:#2ECC71;
+}
+
+.green:hover {
+background-color:#27AE60;
+}
+
+.red {
+background-color:#E74C3C;
+}
+
+.red:hover {
+background-color:#C0392B;
+}
+
+select:focus,select:active {
+border:0;
+outline:0;
+}
+
+ul.summitweb {
+padding-left:10px;
+}
+
+.tablesummit {
+display:block;
+overflow:hidden;
+background:#F1F1F1;
+border-radius:5px;
+margin:5px;
+padding:5px;
+box-shadow: 0px 3px 5px #d6d6d6;
+border: none;
+cursor: pointer;
+}
+
+.tablesummit td {
+padding:5px 0;
+border: none;
+}
+
+.tablesummit th {
+padding-right:15px;
+}
+
+.buscar input:focus,.enfermedades .filtro select:focus {
+outline:0;
+}
+
+.descripcion span,
+.instrucciones span,
+.precauciones span,
+.auxilios span,
+.medioAmbiente span,
+.enfermedad .imagenes span,
+.enfermedad .descripcion span,
+.enfermedad .recomendaciones span,
+.enfermedad .preventivo span,
+.enfermedad .curativo span,
+.tap_button span {
+float:left;
+width:75%;
+margin:10px 0 10px 20px;
+}
+
+.descripcion .icon,
+.instrucciones .icon,
+.precauciones .icon,
+.auxilios .icon,
+.medioAmbiente .icon,
+.enfermedad .imagenes .icon,
+.enfermedad .descripcion .icon,
+.enfermedad .recomendaciones .icon,
+.enfermedad .preventivo .icon,
+.enfermedad .curativo .icon,
+.tap_button .icon {
+float:right;
+margin:10px 20px 10px 0;
+}
+
+.generalidad .luz div:nth-of-type(2) span,.sugerencia p span,.sugerencia div span {
+display:block;
+text-align:center;
+}
+
+.resultadoEnfermedad,.listaEnfermedad,.listaAgente,.generalidades ul,.menu ul {
+list-style-type:none;
+padding:0;
+margin:0;
+}
+
+.tabs i {
+margin-right:10px;
+padding:5px;
+}
+
+
+div [id^="contenidoTipo"] img,.productos img{
+  max-width: 220px;
+  margin: 8px 8px;
+}
+
+.landscape .productos img{
+    max-width: 220px;
+}
+
+.segmentosPage{
+ /*padding: 8px;
+  margin-bottom: 16px;*/
+}
+
+#descripcion h2{
+  text-align: left !important;
+}
+
+div.table{
+      overflow: auto;
+}
+table{
+    border: 1px solid #05683a;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 15px 0px;
+}
+
+table thead {
+    background-color: #05683a;
+    color: white;
+    font-size: 14px;
+}
+
+table tr {
+    border-collapse: collapse;
+}
+
+table td {
+  border: 1px solid #05683a;
+  font-size: 12px;
+  padding: 4px;
+}
+
+
+.tipo-1{
+  padding: 2px;
+  background: #005a7d;
+}
+
+.tipo-1:hover{
+  background: #003a5d;
+}
+
+.tipo-2{
+  padding: 2px;
+  background: #ffa500;
+}
+
+.tipo-2:hover{
+  background: #df8500;
+}
+
+.tipo-3{
+  padding: 2px;
+  background: #3d6d3f;
+}
+
+.tipo-3:hover{
+  background: #1d4d1f;
+}
+
+.tipo-4{
+  padding: 2px;
+  background: #752a82;
+}
+
+.tipo-4:hover{
+  background: #550a62;
+}
+
+.tipo-5{
+  padding: 2px;
+  background: #2f71f3;
+}
+
+.tipo-5:hover{
+  background: #0f51d3;
+}
+
+.tipo-6{
+  padding: 2px;
+  background: #f9c937;
+}
+
+.tipo-6:hover{
+  background: #d9a917;
+}
+
+
+.tipo-7{
+  padding: 2px;
+  background: #671f08;
+}
+
+.tipo-7:hover{
+  background: #601800;
+}
+
+
+.tipo-8, .tipo-{
+  background: #b5b5b5;
+  padding: 2px;
+}
+
+.tipo-8:hover, .tipo-:hover{
+  background: #959595;
+}
+
+#enfermedad_detail_imagenes img{
+  width: 100%;
+}
+
+.noResults{
+  display: block;
+  text-align: center;
+  color: #CFCFCF;
+  margin-top:10%;
+  font-size: 1.8em;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #CCC;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #CCC;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #CCC;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #CCC;
+}
+
+table.responsive span[data-type="responsive"]{
+	display:none;
+}
+
+
+.tabTipo{
+  color: #EEE;
+  cursor:pointer; 
+}
+
+.tipo-2,.tipo-6, .tipo-8{
+  color: #666;
+}
+
+.tabTipo h5{
+  color:inherit;
+  margin: 12px 0;
+  display: inline-block;
+}
+
+.tabTipo .icon{
+  float: right;
+  margin: 12px 0;
+}
+
+.tabTipo:after{
+  clear:both;
+}
+
+.tabTipo{
+    padding-left: 8px;
+    padding-right: 8px;
+    /* margin-top: .5em; */
+    margin: .25em 8px 0 8px;
+}
+
+div[id ^="contenidoTipo"]{
+  margin: 0 8px .25em 8px;
+}
+
+#contenidoTipo1{
+  border-left: #005A7D solid 2px;
+  border-right: #005A7D solid 2px;
+  border-bottom: #005A7D solid 2px;
+}
+
+#contenidoTipo2{
+  border-left: #FFA500 solid 2px;
+  border-right: #FFA500 solid 2px;
+  border-bottom: #FFA500 solid 2px;
+}
+
+#contenidoTipo3{
+  border-left: #3D6D3F solid 2px;
+  border-right: #3D6D3F solid 2px;
+  border-bottom: #3D6D3F solid 2px;
+}
+
+#contenidoTipo4{
+  border-left: #752A82 solid 2px;
+  border-right: #752A82 solid 2px;
+  border-bottom: #752A82 solid 2px;
+}
+
+#contenidoTipo5{
+  border-left: #2F71F3 solid 2px;
+  border-right: #2F71F3 solid 2px;
+  border-bottom: #2F71F3 solid 2px;
+}
+
+#contenidoTipo6{
+  border-left: #F9C937 solid 2px;
+  border-right: #F9C937 solid 2px;
+  border-bottom: #F9C937 solid 2px;
+}
+
+#contenidoTipo7{
+  border-left: #671F08 solid 2px;
+  border-right: #671F08 solid 2px;
+  border-bottom: #671F08 solid 2px;
+}
+
+#contenidoTipo8{
+  border-left: #B5B5B5 solid 2px;
+  border-right: #B5B5B5 solid 2px;
+  border-bottom: #B5B5B5 solid 2px;
+}
+
+div [id^="contenidoTipo"]{
+  display: none;
+}
+
+div [id^="contenidoTipo"],.productos{
+  text-align: center;
+}
+
+
+.bottom-banner{
+  position: absolute;
+  top: 90%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,.9);
+}
+
+.banner-logo{
+  height: 50%;
+  bottom: 25%;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%; 
+    transform-origin: 50% 50%;
+    margin-left: -5%;
+}
+
+
+
+.screen-display{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding: 0;
+}
+
+.appOverlay{
+  background-color: #FFF;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 1000;
+}
+
+.enlace_producto{
+      background: #19a652 !important;
+      height: auto;
+      color: white;
+      text-align: center;
+      padding: 8px 10px;
+      width: 100%;
+      margin-bottom: 5%;
+      border-radius: .35em;
+      border-color: #19a652;
+    }
+
+.enlace_producto:hover{
+      background: #099642 !important;
+}
+
+.enlace_manual{
+      background: #9ca637 !important;
+      height: auto;
+      color: white;
+      text-align: center;
+      padding: 8px 10px;
+      width: 100%;
+      border-radius: .35em;
+      border-color: #9ca637;
+    }
+
+.enlace_manual:hover{
+      background: #8c9627 !important;
+}
+
+.enlace_enfermedad{
+      background: #326f37 !important;
+      height: auto;
+      color: white;
+      text-align: center;
+      padding: 8px 10px;
+      width: 100%;
+      margin-bottom: 5%;
+      border-radius: .35em;
+      border-color: #326f37;
+    }
+
+.enlace_enfermedad:hover{
+  background: #225f27 !important;
+}
+
+.enlaces button{
+  display: inline;
+}
+
+.button-invisible{
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  margin:0;
+  border-width: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button-invisible:hover{
+  background-color: rgba(0,0,0,.3);
+}
+
+.home-background{
+  background-position: center center;
+}
+
+.menuoverlay{
+  display: none;
+}
+
+@media all 
+  and (orientation:landscape)
+  and (max-aspect-ratio:799/453)  {
+
+    .home-background {
+        background-image: url(../img/fondoh_l.jpg);
+        background-repeat: no-repeat;
+        -webkit-background-size:  auto 120%;
+        background-size: auto  120%;
+    }
+
+    .logo{
+    height: 35%;
+    margin: 0 2% 0 auto;
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    left:0;
+    right: 0;
+  }
+
+  .enlaces {
+        text-align: right;
+        width: 95%;
+        position: absolute;
+        background: none;
+        bottom: 14%;
+        left: 0;
+        right: 0;
+        margin: 0 2% 0 auto;
+    }
+
+  .enlace_producto,.enlace_manual,.enlace_enfermedad{
+      height: auto;
+      text-align: center;
+      padding: 17px 3px;
+      width: 30%;
+    }
+
+  .lightbox img{
+    height: 95%;
+    width: auto;
+  }
+
+}
+
+
+
+@media all 
+  and (orientation:landscape)
+  and (min-aspect-ratio:800/453)  {
+
+    .home-background {
+        background-image: url(../img/fondoh_l.jpg);
+        background-repeat: no-repeat;
+        -webkit-background-size:120% auto;
+        background-size: 120% auto;
+    }
+
+    .logo{
+    height: 35%;
+    margin: 0 2% 0 auto;
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    left:0;
+    right: 0;
+  }
+
+  .enlaces {
+        text-align: right;
+        width: 95%;
+        position: absolute;
+        background: none;
+        bottom: 14%;
+        left: 0;
+        right: 0;
+        margin: 0 2% 0 auto;
+    }
+
+  .enlace_producto,.enlace_manual,.enlace_enfermedad{
+      padding: 17px 3px;
+      width: 30%;
+      margin-bottom: 0;
+    }
+
+  .lightbox img{
+    height: 95%;
+    width: auto;
+  }
+
+}
+
+
+@media all 
+  and (orientation: portrait)
+  and (min-aspect-ratio:453/796)  {
+    .home-background {
+      background-image: url(../img/fondo_l.jpg);
+      background-repeat: no-repeat;
+      -webkit-background-size: 120% auto;
+      background-size: 120% auto;
+    }
+
+    .logo{
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+  }
+
+  .enlaces {
+        text-align: center;
+        width: 80%;
+        position: absolute;
+        background: none;
+        bottom: 11%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+  .enlace_producto,.enlace_enfermedad{
+      padding: 8px 10px;
+      width: 100%;
+      margin-bottom: 5%;
+    }
+
+
+  .enlace_manual{
+      padding: 8px 10px;
+      width: 100%;
+    }
+
+  .lightbox img{
+    height: auto;
+    width: 95%;
+  }
+
+}
+
+@media all 
+  and (orientation: portrait)
+  and (max-aspect-ratio:453/795)  {
+    .home-background {
+      background-image: url(../img/fondo_l.jpg);
+      background-repeat: no-repeat;
+      -webkit-background-size: auto 120% ;
+      background-size: auto 120%;
+    }
+
+    .logo{
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+  }
+
+  .enlaces {
+        text-align: center;
+        width: 80%;
+        position: absolute;
+        background: none;
+        bottom: 11%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+  }
+
+  .enlace_producto,.enlace_enfermedad{
+      padding: 8px 10px;
+      width: 100%;
+      margin-bottom: 5%;
+    }
+
+
+  .enlace_manual{
+      padding: 8px 10px;
+      width: 100%;
+    }
+
+  .lightbox img{
+    height: auto;
+    width: 95%;
+  }
+
+}
+
+@media (max-height: 420px){
+    .menu ul{
+      padding: 1% 0;
+    }
+
+    .menu ul li {
+        border: #999 solid 1px;
+        display: inline-block;
+        width: 47%;
+        margin-bottom: 1%;
+    }
+
+    .menu ul li button {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        padding: 7px 0;
+        font-size: .7em;
+    }
+
+    .menu ul li .icon {
+        color: #3b8d25;
+        height: 18px;
+        width: 18px;
+        display: block;
+        margin: 0 auto 2px;
+    }
+
+    .menu ul li span {
+         margin-left: 0px; */
+    }
+
+
+} 
+
+/* Para 960px */
+@media only screen and (min-width: 621px) {
+  .productos img, div [id^="contenidoTipo"] img{
+    max-width: 220px;
+  }
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
+  .productos img, div [id^="contenidoTipo"] img{
+    max-width: 160px;
+  }
+}
+
+/* Para 480px */
+@media  screen and (max-width: 500px) and (min-width: 341px) {
+  .productos img, div [id^="contenidoTipo"] img{
+    max-width: 150px;
+  }
+}
+
+/* Para 320px */
+@media  screen and (max-width: 340px){
+  .productos img, div [id^="contenidoTipo"] img{
+    max-width: 130px;
+  }
+
+  table td {
+    border: 1px solid #05683a;
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+
+
+
+@media only screen and (max-width:768px){
+	table.responsive span[data-type="responsive"]{
+		display:inline-block;
+		width:45%;
+		color:#a8a8a8;
+		vertical-align:top;
+	}
+
+	table.responsive, table.responsive thead, table.responsive tbody, table.responsive th, table.responsive td, table.responsive tr {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+		display: block;
+	}
+
+	html.ie9 table.responsive, html.ie9 table.responsive thead, html.ie9 table.responsive tbody, html.ie9 table.responsive th, html.ie9 table.responsive td, html.ie9 table.responsive tr{
+		float: left;
+		clear: both;
+		width: 100%
+	}
+
+	table.responsive tr {
+		border: 1px solid #ccc;
+	}
+
+	table.responsive td{
+		border: none;
+	}
+
+	table.responsive th{
+		display:none;
+	}
+
+}
