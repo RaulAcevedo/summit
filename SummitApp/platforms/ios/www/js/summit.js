@@ -1485,7 +1485,7 @@ define(function(require, exports, module){
 
 			jQuery('#manualBacterias').on('click', function(){
 				if(jQuery(this).hasClass('menuActivo')){ocultarMenu(); return;}
-				currentMenu = 'manual_bacterias';
+				//currentMenu = 'manual_bacterias';
 				appScreen.cargarContenido('manual',{inTransition: true, outTransition: true}).setContent(generalidades);
 				cargarPagina(this);
 				appScreen.headerContent.setContent('<h2>Manual de bacterias</h2>');
